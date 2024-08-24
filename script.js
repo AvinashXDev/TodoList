@@ -1,20 +1,31 @@
 let todos = [];
+const input = document.querySelector("input");
 function addTodo() {
-  if(document.querySelector("input").value==""){
+  if(input.value==""){
     alert("Please Write a Todo!")
     return
   }
   todos.push({
-    title: document.querySelector("input").value
+    title: input.value
   })
   render()
-  document.querySelector("input").value = "";
+  input.value = "";
 }
 function deleteTodo(index){
   todos.splice(index,1)
   render()
 
 }
+
+
+// added event listener on enter key for input
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+  
+    document.getElementById("addBtn").click();
+  }
+});
+
 
 function createTodoComponent(todo,index) {
   const div = document.createElement("div");
