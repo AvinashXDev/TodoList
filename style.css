@@ -132,6 +132,69 @@ h2{
     margin: 15px;
     font-family: "Playfair Display", serif; }
 
+.checkbox{
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-right: 25px;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+    
+
+
+.checkbox:checked {
+    background-color: rgb(255, 119, 0);
+    border-color: orange;
+}
+
+.checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.strikethrough {
+    text-decoration: line-through;
+    color: #3b3b3b;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin-bottom: px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #5bd65f;
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+.edit-input {
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+    width: calc(100% - 40px);
+    display: inline-block;
+}
+
+
+
 
 
 
